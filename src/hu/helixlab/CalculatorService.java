@@ -48,4 +48,17 @@ public class CalculatorService {
 
     }
 
+    /*Létrehoztam egy Random objektumot, ezzel generáltam két random számot 100 és 150 között. If-vel megvizsgáltam a megadott feltételeket.*/
+    public void generateAndCompareRandomNumbers() {
+        Random random = new Random();
+        int randomNumber1 = random.nextInt(50) + 100;
+        int randomNumber2 = random.nextInt(50) + 100;
+        if (randomNumber1 > randomNumber2 && randomNumber1 % 2 == 0 || randomNumber1 < randomNumber2 && randomNumber1 % 2 != 0) {
+            System.out.print(randomNumber1);
+        } else if (randomNumber1 < randomNumber2 && randomNumber2 % 2 != 0) {
+            System.out.print(randomNumber2);
+        } else {
+            System.out.print(Math.pow(randomNumber1, randomNumber2));
+        }
+    }
 }
